@@ -17,7 +17,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
           </li>
         ))
       ) : (
-        <li>No such contact</li>
+        <p className="form__message">No such contact</p>
       )}
     </ul>
   );
