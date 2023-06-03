@@ -4,17 +4,21 @@ import PropTypes from 'prop-types';
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul className="contacts__list">
-      {contacts.map(contact => (
-        <li className="contacts__list_item" key={contact.id}>
-          {contact.name}: {contact.number}
-          <button
-            onClick={() => onDeleteContact(contact.id)}
-            className="filter__delete_button"
-          >
-            Delete
-          </button>
-        </li>
-      ))}
+      {contacts.length > 0 ? (
+        contacts.map(contact => (
+          <li className="contacts__list_item" key={contact.id}>
+            {contact.name}: {contact.number}
+            <button
+              onClick={() => onDeleteContact(contact.id)}
+              className="filter__delete_button"
+            >
+              Delete
+            </button>
+          </li>
+        ))
+      ) : (
+        <li>No such contact</li>
+      )}
     </ul>
   );
 };

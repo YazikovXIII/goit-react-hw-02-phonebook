@@ -59,7 +59,7 @@ export class App extends React.Component {
           <h1 className="form__title">Phonebook</h1>
           <ContactForm onSubmit={this.addContact} />
         </Section>
-        {filteredContacts.length > 0 && (
+        {this.state.contacts.length > 0 && (
           <Section>
             <h2 className="contacts__list_title">Contacts</h2>
             <Filter value={filter} onChangeFilter={this.changeFilter} />
