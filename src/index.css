@@ -70,3 +70,9 @@ code {
   margin-right: 0;
   margin-left: auto;
 }
+
+.form__button_container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}

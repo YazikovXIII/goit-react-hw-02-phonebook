@@ -54,13 +54,15 @@ export class ContactForm extends Component {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-        {isFormFilled ? (
-          <button className="form__button" type="submit">
-            Add contact
-          </button>
-        ) : (
-          <p className="form__message">Fill the fields to Add contact</p>
-        )}
+        <div className="form__button_container">
+          {isFormFilled ? (
+            <button className="form__button" type="submit">
+              Add contact
+            </button>
+          ) : (
+            <p className="form__message">Fill the fields to Add contact</p>
+          )}
+        </div>
       </form>
     );
   }
