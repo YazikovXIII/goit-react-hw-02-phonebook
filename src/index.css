@@ -44,19 +44,29 @@ code {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 15px;
 }
 
-.contacts__list_title {
-  margin-left: auto;
-  margin-right: auto;
-}
-
+.contacts__list_title,
 .form__title {
   margin-left: auto;
   margin-right: auto;
 }
 
 .contacts__list_item {
+  display: flex;
+}
+
+.contacts__list_item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.filterwrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__delete_button {
+  margin-right: 0;
   margin-left: auto;
-  margin-right: auto;
 }
